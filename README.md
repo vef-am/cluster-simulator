@@ -121,25 +121,20 @@ make clean
 
 ## Documentation
 
-The Doxygen-generated documentation is included in the repository at [Programa final/html](Programa%20final/html). To view it:
+To view the code documentation:
 
-1. Open [Programa final/html/index.html](Programa%20final/html/index.html) in your browser, or
-2. View it on GitHub by navigating to the html folder.
+1. Generate it locally:
+   ```bash
+   cd "Programa final"
+   doxygen Doxyfile
+   ```
+2. Open `DOC/html/index.html` in your browser.
 
 The documentation includes:
 - Class hierarchies and relationships
 - Method signatures and detailed descriptions
 - File dependencies and module structure
 - Data member documentation
-
-To regenerate the documentation locally:
-
-```bash
-cd "Programa final"
-doxygen Doxyfile
-```
-
-This will create updated `html/` and `DOC/` folders.
 
 ## Requirements
 

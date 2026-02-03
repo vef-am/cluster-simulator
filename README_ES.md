@@ -119,25 +119,20 @@ make clean
 
 ## Documentación
 
-La documentación generada por Doxygen está incluida en el repositorio en [Programa final/html](Programa%20final/html). Para verla:
+Para ver la documentación del código:
 
-1. Abre [Programa final/html/index.html](Programa%20final/html/index.html) en tu navegador, o
-2. Visualízala en GitHub navegando a la carpeta html.
+1. Genérala localmente:
+   ```bash
+   cd "Programa final"
+   doxygen Doxyfile
+   ```
+2. Abre `DOC/html/index.html` en tu navegador.
 
 La documentación incluye:
 - Jerarquías de clases y relaciones
 - Firmas de métodos y descripciones detalladas
 - Dependencias de archivos y estructura de módulos
 - Documentación de miembros de datos
-
-Para regenerar la documentación localmente:
-
-```bash
-cd "Programa final"
-doxygen Doxyfile
-```
-
-Esto creará carpetas `html/` y `DOC/` actualizadas.
 
 ## Requisitos
 
