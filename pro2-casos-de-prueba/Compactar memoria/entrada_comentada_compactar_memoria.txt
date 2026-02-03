@@ -1,0 +1,127 @@
+proc0 100 proc11 20 proc21 45 * * proc22 50 * * proc12 30 proc23
+35 * * proc24 25 * *
+
+6                   //El máximo son 6 prioridades
+1
+22
+11
+444
+5
+2
+7                   //A partir del 7 ya no entran
+99
+
+----------
+
+imprimir_estructura_cluster
+
+imprimir_area_espera
+
+imprimir_procesadores_cluster
+
+----------
+
+alta_proceso_procesador pro 50 30 20
+
+imprimir_procesador pro
+
+----------
+
+//Compactar memoria procesador
+
+app proc0 50 30 20
+app proc0 50 25 15              //No debería entrar ya que ya existe un proceso con ese identificador
+app proc0 51 5 20
+app proc0 52 30 14
+
+ipro proc0
+
+bpp proc0 51
+app proc0 51 6 20
+
+ipro proc0
+
+app proc0 54 4 15
+
+ipro proc0
+
+app proc0 55 30 10              //La memoria libre es de 30 pero están repartidas entre un hueco de 1 y un hueco de 29 con lo cual no debería entrar
+app proc0 55 29 10
+
+ipro proc0
+
+app proc0 56 2 10               //La memoria libre es de 1
+
+ipro proc0
+
+cmp proc0                       //Compactamos porque hay un hueco de 1 en medio de la memoria
+
+ipro proc0                      //Se debería de recolocar
+
+bpp proc0 54
+bpp proc0 51                    //Hacemos huecos
+
+ipro proc0
+
+app proc0 57 1 30
+app proc0 51 6 20
+app proc0 54 4 15               //Llenamos la memoria
+
+ipro proc0
+
+cmp proc0                       //Compactamos la memoria sin huecos con lo cual no debería hacer nada
+
+ipro proc0
+
+bpp proc0 57
+bpp proc0 54
+bpp proc0 51                    //Generamos huecos de por medio
+
+ipro proc0
+
+cmp proc0                       //Compactamos la memoria con huecos de por medio
+
+ipro proc0
+
+app proc0 51 6 20               //Añadimos un proceso que debe colocarse último porque solo hay un hueco en el final después de haber compactado
+
+ipro proc0
+
+bpp proc0 50                    //Damos de baja el proceso del inicio
+
+ipro proc0
+
+cmp proc0                       //Compactamos y ya no debería existir el hueco del inicio
+
+ipro proc0
+
+----------
+
+//Compactar memoria cluster
+
+app proc0 53 10 5
+app proc0 54 5 10
+app proc0 56 10 2
+bpp proc0 51
+bpp proc0 52
+bpp proc0 54
+ipro proc0                      //Hacemos huecos de por medio para luego compactar la memoria del cluster entero
+
+app proc21 10 5 10
+app proc21 11 10 3
+app proc21 12 4 2
+app proc21 13 5 2
+ipro proc21
+bpp proc21 10
+bpp proc21 12
+ipro proc21                     //Hacemos huecos de por medio para luego compactar la memoria del cluster entero
+
+ipc
+
+cmc                             //Al compactar las memorias de todos los procesadores no deben existir huecos de por medio en cada procesador
+
+ipc
+
+----------
+
+fin

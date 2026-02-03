@@ -1,0 +1,34 @@
+# Build artifacts
+*.o
+*.obj
+*.exe
+*.out
+*.app
+
+# Archives
+*.tar
+*.tar.gz
+*.zip
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
+
+# Doxygen generated documentation (keep html for portfolio, ignore latex)
+latex/
+DOC/latex/
+
+# Temporary and backup files
+*~
+*.swp
+*.swo
+*.bak
+*Copy*
+*copy*

@@ -1,0 +1,175 @@
+#imprimir_estructura_cluster
+(proc0(proc11(proc21  )(proc22  ))(proc12(proc23  )(proc24  )))
+#imprimir_area_espera
+1
+0 0
+11
+0 0
+2
+0 0
+22
+0 0
+444
+0 0
+5
+0 0
+#imprimir_procesadores_cluster
+proc0
+proc11
+proc12
+proc21
+proc22
+proc23
+proc24
+#alta_proceso_procesador pro 50
+error: no existe procesador
+#imprimir_procesador pro
+error: no existe procesador
+#app proc0 50
+#app proc0 50
+error: ya existe proceso
+#app proc0 51
+#app proc0 52
+#ipro proc0
+0 50 30 20
+30 51 5 20
+35 52 30 14
+#bpp proc0 51
+#app proc0 51
+#ipro proc0
+0 50 30 20
+35 52 30 14
+65 51 6 20
+#app proc0 54
+#ipro proc0
+0 50 30 20
+30 54 4 15
+35 52 30 14
+65 51 6 20
+#app proc0 55
+error: no cabe proceso
+#app proc0 55
+#ipro proc0
+0 50 30 20
+30 54 4 15
+35 52 30 14
+65 51 6 20
+71 55 29 10
+#app proc0 56
+error: no cabe proceso
+#ipro proc0
+0 50 30 20
+30 54 4 15
+35 52 30 14
+65 51 6 20
+71 55 29 10
+#cmp proc0
+#ipro proc0
+0 50 30 20
+30 54 4 15
+34 52 30 14
+64 51 6 20
+70 55 29 10
+#bpp proc0 54
+#bpp proc0 51
+#ipro proc0
+0 50 30 20
+34 52 30 14
+70 55 29 10
+#app proc0 57
+#app proc0 51
+#app proc0 54
+#ipro proc0
+0 50 30 20
+30 54 4 15
+34 52 30 14
+64 51 6 20
+70 55 29 10
+99 57 1 30
+#cmp proc0
+#ipro proc0
+0 50 30 20
+30 54 4 15
+34 52 30 14
+64 51 6 20
+70 55 29 10
+99 57 1 30
+#bpp proc0 57
+#bpp proc0 54
+#bpp proc0 51
+#ipro proc0
+0 50 30 20
+34 52 30 14
+70 55 29 10
+#cmp proc0
+#ipro proc0
+0 50 30 20
+30 52 30 14
+60 55 29 10
+#app proc0 51
+#ipro proc0
+0 50 30 20
+30 52 30 14
+60 55 29 10
+89 51 6 20
+#bpp proc0 50
+#ipro proc0
+30 52 30 14
+60 55 29 10
+89 51 6 20
+#cmp proc0
+#ipro proc0
+0 52 30 14
+30 55 29 10
+59 51 6 20
+#app proc0 53
+#app proc0 54
+#app proc0 56
+#bpp proc0 51
+#bpp proc0 52
+#bpp proc0 54
+#ipro proc0
+30 55 29 10
+65 53 10 5
+80 56 10 2
+#app proc21 10
+#app proc21 11
+#app proc21 12
+#app proc21 13
+#ipro proc21
+0 10 5 10
+5 11 10 3
+15 12 4 2
+19 13 5 2
+#bpp proc21 10
+#bpp proc21 12
+#ipro proc21
+5 11 10 3
+19 13 5 2
+#ipc
+proc0
+30 55 29 10
+65 53 10 5
+80 56 10 2
+proc11
+proc12
+proc21
+5 11 10 3
+19 13 5 2
+proc22
+proc23
+proc24
+#cmc
+#ipc
+proc0
+0 55 29 10
+29 53 10 5
+39 56 10 2
+proc11
+proc12
+proc21
+0 11 10 3
+10 13 5 2
+proc22
+proc23
+proc24

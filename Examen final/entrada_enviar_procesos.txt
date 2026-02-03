@@ -1,0 +1,71 @@
+proc0 100 proc11 20 proc21 45 * * proc22 50 * * proc12 30 proc23
+35 * * proc24 25 * *
+
+6
+1
+22
+11
+444
+5
+2
+7
+99
+
+----------
+
+imprimir_estructura_cluster
+
+imprimir_area_espera
+
+imprimir_procesadores_cluster
+
+----------
+
+ape 1 10 20 5
+ape 1 11 50 50
+ape 1 12 200 20
+ape 1 13 100 40
+ape 1 14 30 5
+ape 1 15 25 10
+ape 1 16 5 10
+ape 22 10 40 5
+ape 22 10 30 5
+ape 22 11 30 5
+ape 22 12 5 10
+ape 22 13 5 10
+ape 444 20 5 5
+ape 444 21 30 10
+ape 444 22 100 20
+
+iae
+ipc
+epc 3
+ipc
+iae
+epc 100
+ipc
+iae
+
+at 5
+
+ipc
+epc 5
+ipc
+cmc
+epc 5
+ipc
+
+----------
+
+alta_prioridad 444
+ipri 7
+alta_prioridad 7
+ipri 1
+baja_prioridad 1
+ipri 11
+baja_prioridad 11
+iae
+
+----------
+
+fin

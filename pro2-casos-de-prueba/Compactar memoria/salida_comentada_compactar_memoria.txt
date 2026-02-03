@@ -1,0 +1,227 @@
+#imprimir_estructura_cluster
+(proc0(proc11(proc21  )(proc22  ))(proc12(proc23  )(proc24  )))
+
+#imprimir_area_espera
+1
+0 0
+11
+0 0
+2
+0 0
+22
+0 0
+444
+0 0
+5
+0 0
+
+#imprimir_procesadores_cluster
+proc0
+proc11
+proc12
+proc21
+proc22
+proc23
+proc24
+
+----------
+
+//Comprobamos errores básicos
+
+#alta_proceso_procesador pro 50
+error: no existe procesador
+
+#imprimir_procesador pro
+error: no existe procesador
+
+----------
+
+#app proc0 50
+
+#app proc0 50                   //Intentamos añadir un proceso que ya existe en el procesador
+error: ya existe proceso
+
+#app proc0 51
+
+#app proc0 52
+
+#ipro proc0                     //Comprobamos los procesos que hay
+0 50 30 20
+30 51 5 20
+35 52 30 14
+
+#bpp proc0 51                   //Damos de baja un proceso entre 2 procesos 
+
+#app proc0 51
+
+#ipro proc0
+0 50 30 20
+35 52 30 14
+65 51 6 20                     //Vemos que no cabe en el hueco de 5 ya que ocupa 6 de memoria
+
+#app proc0 54
+
+#ipro proc0
+0 50 30 20
+30 54 4 15                     //Insertamos un proceso de 4 de memoria y vemos que entra en el hueco de 5
+35 52 30 14
+65 51 6 20
+
+#app proc0 55                  //Intentamos meter un proceso de memoria mayor al de los huecos
+error: no cabe proceso
+
+#app proc0 55
+
+#ipro proc0
+0 50 30 20
+30 54 4 15
+35 52 30 14
+65 51 6 20
+71 55 29 10                    //El procesador está casi lleno, solo hay un hueco de 1 de memoria
+
+#app proc0 56                  //Intentamos meter un proceso de memoria mayor al de los huecos
+error: no cabe proceso
+
+#ipro proc0
+0 50 30 20
+30 54 4 15
+35 52 30 14
+65 51 6 20
+71 55 29 10
+
+#cmp proc0                      //Compactamos memoria
+
+#ipro proc0
+0 50 30 20
+30 54 4 15
+34 52 30 14                     //Se recolocan por compactar la memoria
+64 51 6 20
+70 55 29 10
+
+#bpp proc0 54
+#bpp proc0 51
+
+#ipro proc0
+0 50 30 20
+34 52 30 14
+70 55 29 10
+
+#app proc0 57
+#app proc0 51
+#app proc0 54
+
+#ipro proc0                 //Añadimos procesos hasta llenar la memoria
+0 50 30 20
+30 54 4 15
+34 52 30 14
+64 51 6 20
+70 55 29 10
+99 57 1 30
+
+#cmp proc0                  //Compactamos sin huecos
+
+#ipro proc0
+0 50 30 20
+30 54 4 15
+34 52 30 14
+64 51 6 20
+70 55 29 10
+99 57 1 30                  //La memoria ya estaba compactada
+
+#bpp proc0 57
+#bpp proc0 54
+#bpp proc0 51
+
+#ipro proc0
+0 50 30 20
+34 52 30 14
+70 55 29 10
+
+#cmp proc0                  //Compactamos la memoria con huecos en medio
+
+#ipro proc0
+0 50 30 20
+30 52 30 14
+60 55 29 10
+
+#app proc0 51               //Insertamos nuevo proceso en el nuevo hueco del final
+
+#ipro proc0
+0 50 30 20
+30 52 30 14
+60 55 29 10
+89 51 6 20
+
+#bpp proc0 50               //Damos de baja el proceso del inicio
+
+#ipro proc0
+30 52 30 14
+60 55 29 10
+89 51 6 20
+
+#cmp proc0                  //Compactamos la memoria con un hueco en el inicio
+
+#ipro proc0
+0 52 30 14
+30 55 29 10
+59 51 6 20
+
+----------
+
+#app proc0 53
+#app proc0 54
+#app proc0 56
+#bpp proc0 51
+#bpp proc0 52
+#bpp proc0 54
+#ipro proc0
+30 55 29 10
+65 53 10 5
+80 56 10 2               //Hacemos huecos para luego compactar
+
+#app proc21 10
+#app proc21 11
+#app proc21 12
+#app proc21 13
+#ipro proc21
+0 10 5 10
+5 11 10 3
+15 12 4 2
+19 13 5 2
+#bpp proc21 10
+#bpp proc21 12
+#ipro proc21
+5 11 10 3
+19 13 5 2               //Hacemos huecos para luego compactar
+
+#ipc                    //Cluster sin compactar
+proc0
+30 55 29 10
+65 53 10 5
+80 56 10 2
+proc11
+proc12
+proc21
+5 11 10 3
+19 13 5 2
+proc22
+proc23
+proc24
+
+#cmc                    //Compactamos cluster
+
+#ipc
+proc0
+0 55 29 10
+29 53 10 5
+39 56 10 2
+proc11
+proc12
+proc21
+0 11 10 3
+10 13 5 2
+proc22
+proc23
+proc24                  //Cluster entero compactado
+
+----------

@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Laboratorio de PRO2. Ejercicio &#39;Simulación del rendimiento de procesadores interconectados&#39;.: Fichero Fuente Procesador.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Laboratorio de PRO2. Ejercicio &#39;Simulación del rendimiento de procesadores interconectados&#39;.<span id="projectnumber">&#160;2.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Procesador.hh</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Procesador_8hh.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef PROCESADOR_HH</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define PROCESADOR_HH</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef NO_DIAGRAM</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;set&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="Proceso_8hh.html">Proceso.hh</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classProcesador.html">   22</a></span><span class="keyword">class </span><a class="code hl_class" href="classProcesador.html">Procesador</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classProcesador.html#ae27694398f8d93efdcb34f87a2fb9420">   27</a></span>map&lt;int, int&gt; <a class="code hl_variable" href="classProcesador.html#ae27694398f8d93efdcb34f87a2fb9420">map_identificador</a>;    <span class="comment">//int = identificador, int = posición del proceso</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classProcesador.html#af059205be783f3944b85ebc0eb7c80f6">   30</a></span>map&lt;int, Proceso&gt; <a class="code hl_variable" href="classProcesador.html#af059205be783f3944b85ebc0eb7c80f6">map_posicion</a>;     <span class="comment">//int = Posición del proceso</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classProcesador.html#a0f1ac8d7b24d0468f5c17f74890f2728">   33</a></span>map&lt;int, set&lt;int&gt;&gt; <a class="code hl_variable" href="classProcesador.html#a0f1ac8d7b24d0468f5c17f74890f2728">map_huecos</a>;      <span class="comment">//int = tamaño del hueco, set&lt;int&gt; = posiciones de huecos con ese tamaño (de menor a mayor)  //lower_bound(int) = busca &lt;= a ese int</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classProcesador.html#a10a54a6db60571b218759453c23bdf52">   36</a></span><span class="keywordtype">int</span> <a class="code hl_variable" href="classProcesador.html#a10a54a6db60571b218759453c23bdf52">memoria_max</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classProcesador.html#a734a0018d5dd5715e33e24babdcfb38e">   39</a></span><span class="keywordtype">int</span> <a class="code hl_variable" href="classProcesador.html#a734a0018d5dd5715e33e24babdcfb38e">memoria_libre</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="comment">//Constructores</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_function" href="classProcesador.html#aacfa2a06c7d44636ecfb0338bebbfa8b">Procesador</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_function" href="classProcesador.html#aacfa2a06c7d44636ecfb0338bebbfa8b">Procesador</a>(<span class="keywordtype">int</span> m);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">//Modificadores</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classProcesador.html#ac7b275c70b4aaa2083748446701f6fc3">alta_proceso</a>(<span class="keyword">const</span> <a class="code hl_class" href="classProceso.html">Proceso</a>&amp; proc);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classProcesador.html#a94d0f914948329ddc5bee6d16889bc39">baja_proceso</a>(<span class="keywordtype">int</span> proceso);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classProcesador.html#a91055a2cc9c3129051a762a9eb2a1f19">avanzar_tiempo</a>(<span class="keywordtype">int</span> t);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classProcesador.html#a06b0b1c913b359a1bc6c920120dd0e66">compactar_memoria</a>();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">//Consultoras</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classProcesador.html#a73981fdf5ac86dd33665321f1909483a">existe_proceso</a>(<span class="keywordtype">int</span> proceso) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classProcesador.html#a8785b58339cf8c38117716a017cb80b9">tiene_procesos</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classProcesador.html#aea71867b4be9e91b7836ec5999b4d9de">espacio_libre</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classProcesador.html#aa4cb4d12312747a5ba49fa265f6fb63d">mejor_hueco</a>(<span class="keyword">const</span> <a class="code hl_class" href="classProceso.html">Proceso</a>&amp; proc) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="comment">//Lectura</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classProcesador.html#ac104960814ba918ba113ed9d58bca271">leer</a>();</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="comment">//Escritura</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classProcesador.html#a555c4158255a7de97a578d0c0661360a">escribir</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classProcesador.html#ae6b6172b71a8fee897d5c16f91bc7488">i_baja_proceso</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> lugar);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classProcesador.html#ada9de4c1c4cce831610d77ca9112bce6">i_baja_anterior</a>(map&lt;int, Proceso&gt;::iterator it, <span class="keywordtype">int</span>&amp; memoria, <span class="keywordtype">int</span>&amp; posicion);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classProcesador.html#a6d37ce9289cdffae256ad6b9799f230c">i_baja_siguiente</a>(map&lt;int, Proceso&gt;::iterator it, <span class="keywordtype">int</span>&amp; memoria, <span class="keywordtype">int</span> posicion);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>};</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aProceso_8hh_html"><div class="ttname"><a href="Proceso_8hh.html">Proceso.hh</a></div><div class="ttdoc">Especificación de la clase Proceso.</div></div>
+<div class="ttc" id="aclassProcesador_html"><div class="ttname"><a href="classProcesador.html">Procesador</a></div><div class="ttdoc">Representa un procesador.</div><div class="ttdef"><b>Definition:</b> Procesador.hh:22</div></div>
+<div class="ttc" id="aclassProcesador_html_a06b0b1c913b359a1bc6c920120dd0e66"><div class="ttname"><a href="classProcesador.html#a06b0b1c913b359a1bc6c920120dd0e66">Procesador::compactar_memoria</a></div><div class="ttdeci">void compactar_memoria()</div><div class="ttdoc">Compacta la memoria en un procesador.</div><div class="ttdef"><b>Definition:</b> Procesador.cc:141</div></div>
+<div class="ttc" id="aclassProcesador_html_a0f1ac8d7b24d0468f5c17f74890f2728"><div class="ttname"><a href="classProcesador.html#a0f1ac8d7b24d0468f5c17f74890f2728">Procesador::map_huecos</a></div><div class="ttdeci">map&lt; int, set&lt; int &gt; &gt; map_huecos</div><div class="ttdoc">Tamaños de huecos en la memoria ordenadas crecientemente y sus posiciones asociadas.</div><div class="ttdef"><b>Definition:</b> Procesador.hh:33</div></div>
+<div class="ttc" id="aclassProcesador_html_a10a54a6db60571b218759453c23bdf52"><div class="ttname"><a href="classProcesador.html#a10a54a6db60571b218759453c23bdf52">Procesador::memoria_max</a></div><div class="ttdeci">int memoria_max</div><div class="ttdoc">Memoria máxima del procesador.</div><div class="ttdef"><b>Definition:</b> Procesador.hh:36</div></div>
+<div class="ttc" id="aclassProcesador_html_a555c4158255a7de97a578d0c0661360a"><div class="ttname"><a href="classProcesador.html#a555c4158255a7de97a578d0c0661360a">Procesador::escribir</a></div><div class="ttdeci">void escribir() const</div><div class="ttdoc">Escribe un procesador.</div><div class="ttdef"><b>Definition:</b> Procesador.cc:211</div></div>
+<div class="ttc" id="aclassProcesador_html_a6d37ce9289cdffae256ad6b9799f230c"><div class="ttname"><a href="classProcesador.html#a6d37ce9289cdffae256ad6b9799f230c">Procesador::i_baja_siguiente</a></div><div class="ttdeci">void i_baja_siguiente(map&lt; int, Proceso &gt;::iterator it, int &amp;memoria, int posicion)</div><div class="ttdoc">Comprueba si hay un hueco después del proceso.</div><div class="ttdef"><b>Definition:</b> Procesador.cc:96</div></div>
+<div class="ttc" id="aclassProcesador_html_a734a0018d5dd5715e33e24babdcfb38e"><div class="ttname"><a href="classProcesador.html#a734a0018d5dd5715e33e24babdcfb38e">Procesador::memoria_libre</a></div><div class="ttdeci">int memoria_libre</div><div class="ttdoc">Memoria libre del procesador.</div><div class="ttdef"><b>Definition:</b> Procesador.hh:39</div></div>
+<div class="ttc" id="aclassProcesador_html_a73981fdf5ac86dd33665321f1909483a"><div class="ttname"><a href="classProcesador.html#a73981fdf5ac86dd33665321f1909483a">Procesador::existe_proceso</a></div><div class="ttdeci">int existe_proceso(int proceso) const</div><div class="ttdoc">Consulta si existe el proceso en el procesador.</div><div class="ttdef"><b>Definition:</b> Procesador.cc:184</div></div>
+<div class="ttc" id="aclassProcesador_html_a8785b58339cf8c38117716a017cb80b9"><div class="ttname"><a href="classProcesador.html#a8785b58339cf8c38117716a017cb80b9">Procesador::tiene_procesos</a></div><div class="ttdeci">int tiene_procesos() const</div><div class="ttdoc">Consulta si el procesador contiene procesos.</div><div class="ttdef"><b>Definition:</b> Procesador.cc:190</div></div>
+<div class="ttc" id="aclassProcesador_html_a91055a2cc9c3129051a762a9eb2a1f19"><div class="ttname"><a href="classProcesador.html#a91055a2cc9c3129051a762a9eb2a1f19">Procesador::avanzar_tiempo</a></div><div class="ttdeci">void avanzar_tiempo(int t)</div><div class="ttdoc">Avanza el tiempo en un procesador.</div><div class="ttdef"><b>Definition:</b> Procesador.cc:126</div></div>
+<div class="ttc" id="aclassProcesador_html_a94d0f914948329ddc5bee6d16889bc39"><div class="ttname"><a href="classProcesador.html#a94d0f914948329ddc5bee6d16889bc39">Procesador::baja_proceso</a></div><div class="ttdeci">int baja_proceso(int proceso)</div><div class="ttdoc">Da de baja un proceso.</div><div class="ttdef"><b>Definition:</b> Procesador.cc:42</div></div>
+<div class="ttc" id="aclassProcesador_html_aa4cb4d12312747a5ba49fa265f6fb63d"><div class="ttname"><a href="classProcesador.html#aa4cb4d12312747a5ba49fa265f6fb63d">Procesador::mejor_hueco</a></div><div class="ttdeci">int mejor_hueco(const Proceso &amp;proc) const</div><div class="ttdoc">Consulta si el proceso cabe en el procesador y su mejor hueco.</div><div class="ttdef"><b>Definition:</b> Procesador.cc:199</div></div>
+<div class="ttc" id="aclassProcesador_html_aacfa2a06c7d44636ecfb0338bebbfa8b"><div class="ttname"><a href="classProcesador.html#aacfa2a06c7d44636ecfb0338bebbfa8b">Procesador::Procesador</a></div><div class="ttdeci">Procesador()</div><div class="ttdoc">Creadora por defecto.</div><div class="ttdef"><b>Definition:</b> Procesador.cc:8</div></div>
+<div class="ttc" id="aclassProcesador_html_ac104960814ba918ba113ed9d58bca271"><div class="ttname"><a href="classProcesador.html#ac104960814ba918ba113ed9d58bca271">Procesador::leer</a></div><div class="ttdeci">void leer()</div><div class="ttdoc">Lee un procesador.</div><div class="ttdef"><b>Definition:</b> Procesador.cc:205</div></div>
+<div class="ttc" id="aclassProcesador_html_ac7b275c70b4aaa2083748446701f6fc3"><div class="ttname"><a href="classProcesador.html#ac7b275c70b4aaa2083748446701f6fc3">Procesador::alta_proceso</a></div><div class="ttdeci">int alta_proceso(const Proceso &amp;proc)</div><div class="ttdoc">Da de alta un proceso.</div><div class="ttdef"><b>Definition:</b> Procesador.cc:16</div></div>
+<div class="ttc" id="aclassProcesador_html_ada9de4c1c4cce831610d77ca9112bce6"><div class="ttname"><a href="classProcesador.html#ada9de4c1c4cce831610d77ca9112bce6">Procesador::i_baja_anterior</a></div><div class="ttdeci">void i_baja_anterior(map&lt; int, Proceso &gt;::iterator it, int &amp;memoria, int &amp;posicion)</div><div class="ttdoc">Comprueba si hay un hueco antes del proceso.</div><div class="ttdef"><b>Definition:</b> Procesador.cc:67</div></div>
+<div class="ttc" id="aclassProcesador_html_ae27694398f8d93efdcb34f87a2fb9420"><div class="ttname"><a href="classProcesador.html#ae27694398f8d93efdcb34f87a2fb9420">Procesador::map_identificador</a></div><div class="ttdeci">map&lt; int, int &gt; map_identificador</div><div class="ttdoc">Identificadores de procesos ordenadas crecientemente asociadas a su posicón en la memoria.</div><div class="ttdef"><b>Definition:</b> Procesador.hh:27</div></div>
+<div class="ttc" id="aclassProcesador_html_ae6b6172b71a8fee897d5c16f91bc7488"><div class="ttname"><a href="classProcesador.html#ae6b6172b71a8fee897d5c16f91bc7488">Procesador::i_baja_proceso</a></div><div class="ttdeci">void i_baja_proceso(int id, int lugar)</div><div class="ttdoc">Da de baja un proceso.</div><div class="ttdef"><b>Definition:</b> Procesador.cc:51</div></div>
+<div class="ttc" id="aclassProcesador_html_aea71867b4be9e91b7836ec5999b4d9de"><div class="ttname"><a href="classProcesador.html#aea71867b4be9e91b7836ec5999b4d9de">Procesador::espacio_libre</a></div><div class="ttdeci">int espacio_libre() const</div><div class="ttdoc">Consulta cuanta memoria libre tiene el procesador.</div><div class="ttdef"><b>Definition:</b> Procesador.cc:195</div></div>
+<div class="ttc" id="aclassProcesador_html_af059205be783f3944b85ebc0eb7c80f6"><div class="ttname"><a href="classProcesador.html#af059205be783f3944b85ebc0eb7c80f6">Procesador::map_posicion</a></div><div class="ttdeci">map&lt; int, Proceso &gt; map_posicion</div><div class="ttdoc">Posición de los procesos en la memoria del procesador ordenados crecientemente.</div><div class="ttdef"><b>Definition:</b> Procesador.hh:30</div></div>
+<div class="ttc" id="aclassProceso_html"><div class="ttname"><a href="classProceso.html">Proceso</a></div><div class="ttdoc">Representa un proceso.</div><div class="ttdef"><b>Definition:</b> Proceso.hh:18</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

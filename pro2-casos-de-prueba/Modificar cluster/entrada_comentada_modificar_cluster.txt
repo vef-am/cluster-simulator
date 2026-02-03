@@ -1,0 +1,148 @@
+proc0 100 proc11 20 proc21 45 * * proc22 50 * * proc12 30 proc23
+35 * * proc24 25 * *
+
+6                   //El máximo son 6 prioridades
+1
+22
+11
+444
+5
+2
+7                   //A partir del 7 ya no entran
+99
+
+----------
+
+imprimir_estructura_cluster
+
+imprimir_area_espera
+
+imprimir_procesadores_cluster
+
+----------
+
+//Modificar cluster
+
+
+modificar_cluster pro           //Intentamos modificar el cluster a través de un procesador que no existe
+pr0
+50
+pr1
+30
+*
+*
+*
+
+app proc0 10 30 5
+ipro proc0
+
+mc proc0                        //Intentamos modificar el cluster a través de un procesador con procesos
+pr2
+200
+*
+*
+
+ipro proc12
+
+mc proc12                       //Intentamos modificar el cluster a través de un procesador sin procesos pero con (un) procesador/es auxiliar/es
+pr3
+100
+*
+*
+
+ipro proc21
+
+mc proc21                       //Intentamos modificar el cluster a través de un procesador sin procesos, sin ningún procesador auxiliar y es un hijo izquierdo
+pr4
+15
+pr5
+50
+*
+*
+pr6
+20
+*
+pr7
+30
+*
+*
+
+iec                             //Comprobamos la nueva estructura modificada
+
+ipc                             //Comprobamos si se actualizaron los procesadores (añadir y/o quitar procesadores)
+
+ipro pr4
+
+mc pr4                          //Intentamos modificar el cluster a través de un procesador nuevo recién añadido sin procesos pero con (un) procesador/es auxiliar/es
+pr8
+80
+*
+*
+
+ipro pr5
+
+app pr5 10 50 15
+ipro pr5
+
+mc pr5                          //Intentamos modificar el cluster a través de un procesador nuevo recién añadido pero con procesos
+pr8
+50
+pr9
+60
+*
+*
+pr10
+10
+pr11
+40
+*
+*
+*
+
+ipro pr7
+
+mc pr7                          //Intentamos modificar el cluster a través de un procesador nuevo recién añadido y es un hijo derecho
+pr8
+50
+pr9
+60
+*
+*
+pr10
+10
+pr11
+40
+*
+*
+*
+
+iec                             //Comprobamos la nueva estructura modificada
+
+ipc                             //Comprobamos si se actualizaron los procesadores (añadir y/o quitar procesadores)
+
+----------
+
+//Configurar cluster
+
+configurar_cluster
+xyz
+1000
+*
+*
+
+iec
+
+cc
+pyj
+200
+*
+orp
+550
+*
+*
+
+iec
+
+----------
+
+fin

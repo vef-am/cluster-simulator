@@ -1,0 +1,223 @@
+#imprimir_estructura_cluster
+(proc0(proc11(proc21  )(proc22  ))(proc12(proc23  )(proc24  )))
+#imprimir_area_espera
+1
+0 0
+11
+0 0
+2
+0 0
+22
+0 0
+444
+0 0
+5
+0 0
+#imprimir_procesadores_cluster
+proc0
+proc11
+proc12
+proc21
+proc22
+proc23
+proc24
+#ape 1 10
+#ape 1 11
+#ape 1 12
+#ape 1 13
+#ape 1 14
+#ape 1 15
+#ape 1 16
+#ape 22 10
+#ape 22 10
+error: ya existe proceso
+#ape 22 11
+#ape 22 12
+#ape 22 13
+#ape 444 20
+#ape 444 21
+#ape 444 22
+#iae
+1
+10 20 5
+11 50 50
+12 200 20
+13 100 40
+14 30 5
+15 25 10
+16 5 10
+0 0
+11
+0 0
+2
+0 0
+22
+10 40 5
+11 30 5
+12 5 10
+13 5 10
+0 0
+444
+20 5 5
+21 30 10
+22 100 20
+0 0
+5
+0 0
+#ipc
+proc0
+proc11
+proc12
+proc21
+proc22
+proc23
+proc24
+#epc 3
+#ipc
+proc0
+0 10 20 5
+20 11 50 50
+proc11
+proc12
+proc21
+proc22
+0 14 30 5
+proc23
+proc24
+#iae
+1
+15 25 10
+16 5 10
+12 200 20
+13 100 40
+3 2
+11
+0 0
+2
+0 0
+22
+10 40 5
+11 30 5
+12 5 10
+13 5 10
+0 0
+444
+20 5 5
+21 30 10
+22 100 20
+0 0
+5
+0 0
+#epc 100
+#ipc
+proc0
+0 10 20 5
+20 11 50 50
+70 12 5 10
+75 20 5 5
+proc11
+proc12
+0 11 30 5
+proc21
+0 15 25 10
+proc22
+0 14 30 5
+proc23
+0 16 5 10
+5 13 5 10
+proc24
+#iae
+1
+12 200 20
+13 100 40
+5 4
+11
+0 0
+2
+0 0
+22
+10 40 5
+3 1
+444
+21 30 10
+22 100 20
+1 2
+5
+0 0
+#at 5
+#ipc
+proc0
+20 11 50 45
+70 12 5 5
+proc11
+proc12
+proc21
+0 15 25 5
+proc22
+proc23
+0 16 5 5
+5 13 5 5
+proc24
+#epc 5
+#ipc
+proc0
+20 11 50 45
+70 12 5 5
+proc11
+proc12
+0 21 30 10
+proc21
+0 15 25 5
+proc22
+0 10 40 5
+proc23
+0 16 5 5
+5 13 5 5
+proc24
+#cmc
+#epc 5
+#ipc
+proc0
+0 11 50 45
+50 12 5 5
+proc11
+proc12
+0 21 30 10
+proc21
+0 15 25 5
+proc22
+0 10 40 5
+proc23
+0 16 5 5
+5 13 5 5
+proc24
+#alta_prioridad 444
+error: ya existe prioridad
+#ipri 7
+error: no existe prioridad
+#alta_prioridad 7
+#ipri 1
+12 200 20
+13 100 40
+5 8
+#baja_prioridad 1
+error: prioridad con procesos
+#ipri 11
+0 0
+#baja_prioridad 11
+#iae
+1
+12 200 20
+13 100 40
+5 8
+2
+0 0
+22
+4 1
+444
+22 100 20
+2 4
+5
+0 0
+7
+0 0

@@ -1,0 +1,105 @@
+#imprimir_estructura_cluster
+(proc0(proc11(proc21  )(proc22  ))(proc12(proc23  )(proc24  )))
+
+#imprimir_area_espera
+1
+0 0
+11
+0 0
+2
+0 0
+22
+0 0
+444
+0 0
+5
+0 0
+
+#imprimir_procesadores_cluster
+proc0
+proc11
+proc12
+proc21
+proc22
+proc23
+proc24
+
+----------
+
+#modificar_cluster pro			//El procesador con ese identificador no existe
+error: no existe procesador
+
+#app proc0 10
+#ipro proc0
+0 10 30 5
+#mc proc0                               //Al tener procesos no se podrá modificar y no mirará si tiene procesadores auxiliares
+error: procesador con procesos
+
+#ipro proc12
+#mc proc12                              //Al no tener procesos, mirará si tiene procesadores auxiliares y como ya sabemos que tiene no se podrá modificar
+error: procesador con auxiliares
+
+#ipro proc21
+#mc proc21                              //Como no tiene procesos ni procesadores auxiliares el cluster se modificará y al ser hijo izquierdo no se mirará el hijo derecho
+
+#iec
+(proc0(proc11(pr4(pr5  )(pr6 (pr7  )))(proc22  ))(proc12(proc23  )(proc24  )))
+
+#ipc
+pr4
+pr5
+pr6
+pr7
+proc0
+0 10 30 5
+proc11
+proc12
+proc22
+proc23
+proc24                                    //Vemos los cambios hechos
+
+#ipro pr4
+#mc pr4                                   //Tratamos de modificar un procesador recién añadido sin procesos y como tiene procesadores auxiliares dará error
+error: procesador con auxiliares
+
+#ipro pr5
+#app pr5 10
+#ipro pr5
+0 10 50 15
+#mc pr5                                   //Tratamos de modificar un procesador recién añadido con procesos y no se mirará si tiene procesadores auxiliares dando así error
+error: procesador con procesos
+
+#ipro pr7
+#mc pr7                                   //Tratamos de modificar un procesador recién añadido sin procesos ni procesadores auxiliares y siendo un hijo derecho
+
+#iec
+(proc0(proc11(pr4(pr5  )(pr6 (pr8(pr9  )(pr10(pr11  ) ))))(proc22  ))(proc12(proc23  )(proc24  )))
+
+#ipc
+pr10
+pr11
+pr4
+pr5
+0 10 50 15
+pr6
+pr8
+pr9
+proc0
+0 10 30 5
+proc11
+proc12
+proc22
+proc23
+proc24
+
+----------
+
+#configurar_cluster
+#iec
+(xyz  )
+
+#cc
+#iec
+(pyj (orp  ))
+
+----------

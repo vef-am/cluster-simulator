@@ -1,0 +1,84 @@
+#imprimir_estructura_cluster
+(proc0(proc11(proc21  )(proc22  ))(proc12(proc23  )(proc24  )))
+#imprimir_area_espera
+1
+0 0
+11
+0 0
+2
+0 0
+22
+0 0
+444
+0 0
+5
+0 0
+#imprimir_procesadores_cluster
+proc0
+proc11
+proc12
+proc21
+proc22
+proc23
+proc24
+#modificar_cluster pro
+error: no existe procesador
+#app proc0 10
+#ipro proc0
+0 10 30 5
+#mc proc0
+error: procesador con procesos
+#ipro proc12
+#mc proc12
+error: procesador con auxiliares
+#ipro proc21
+#mc proc21
+#iec
+(proc0(proc11(pr4(pr5  )(pr6 (pr7  )))(proc22  ))(proc12(proc23  )(proc24  )))
+#ipc
+pr4
+pr5
+pr6
+pr7
+proc0
+0 10 30 5
+proc11
+proc12
+proc22
+proc23
+proc24
+#ipro pr4
+#mc pr4
+error: procesador con auxiliares
+#ipro pr5
+#app pr5 10
+#ipro pr5
+0 10 50 15
+#mc pr5
+error: procesador con procesos
+#ipro pr7
+#mc pr7
+#iec
+(proc0(proc11(pr4(pr5  )(pr6 (pr8(pr9  )(pr10(pr11  ) ))))(proc22  ))(proc12(proc23  )(proc24  )))
+#ipc
+pr10
+pr11
+pr4
+pr5
+0 10 50 15
+pr6
+pr8
+pr9
+proc0
+0 10 30 5
+proc11
+proc12
+proc22
+proc23
+proc24
+#configurar_cluster
+#iec
+(xyz  )
+#cc
+#iec
+(pyj (orp  ))
